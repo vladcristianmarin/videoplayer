@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./index.css" />
+		<title>Video Player</title>
+	</head>
+	<body draggable="false">
+		<header class="player-header">
+			<div class="player-header--text">
+				<div class="now-playing--container">
+					<p class="player-header--now-playing">NOW PLAYING</p>
+					<div class="dot-pulse"></div>
+				</div>
+				<p class="player-header--title">NOTHING IS PLAYING</p>
+			</div>
+			<div class="player-header--controls">
+				<button class="player-header--control uploadVideo">
+					<ion-icon name="cloud-upload-outline"> </ion-icon>
+				</button>
+				<input
+					id="fileBrowser"
+					type="file"
+					accept="video/*"
+					style="display: none"
+				/>
+				<button class="player-header--control prevVideo">
+					<ion-icon name="play-skip-back-outline"></ion-icon></button
+				><button class="player-header--control nextVideo">
+					<ion-icon name="play-skip-forward-outline"></ion-icon></button
+				><button class="player-header--control playPause">
+					<ion-icon name="play-outline"></ion-icon>
+				</button>
+			</div>
+		</header>
+		<main class="video-player">
+			<div class="video-player--content">
+				<canvas width="1920" height="1080"
+					>Your browser doesn't support HTML 5 canvas
+				</canvas>
+			</div>
+			<ul class="video-player--playlist"></ul>
+			<div class="filters-container">
+				<ul class="video-player--filters">
+					<li>
+						<button class="video-player--filters__item">
+							<span class="text">Grayscale</span>
+							<span class="icon">
+								<ion-icon name="star"></ion-icon>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="video-player--filters__item">
+							<span class="text">Contrast</span>
+							<span class="icon">
+								<ion-icon name="star"></ion-icon>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="video-player--filters__item">
+							<span class="text">Warmer</span>
+							<span class="icon">
+								<ion-icon name="star"></ion-icon>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="video-player--filters__item">
+							<span class="text">Grime</span>
+							<span class="icon">
+								<ion-icon name="star"></ion-icon>
+							</span>
+						</button>
+					</li>
+					<li>
+						<button class="video-player--filters__item">
+							<span class="text">Rose Tint</span>
+							<span class="icon">
+								<ion-icon name="star"></ion-icon>
+							</span>
+						</button>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+			</div>
+		</main>
+		<script src="./script.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
+		<script></script>
+	</body>
+</html>
